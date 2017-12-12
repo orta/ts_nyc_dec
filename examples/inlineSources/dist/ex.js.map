@@ -1,0 +1,1 @@
+{"version":3,"file":"ex.js","sourceRoot":"","sources":["../ex.ts"],"names":[],"mappings":";;AAAA,4CAA4C;AAC/B,QAAA,UAAU,GAAG,IAAI,CAAA","sourcesContent":["/** Used to show the user a hello message */\nexport const helloWorld = \"hi\"\n"]}
