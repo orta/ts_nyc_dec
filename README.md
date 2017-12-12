@@ -2,7 +2,7 @@
 
 # ECMA
 
-Before we start, we need to briefly cover the history of JavaScript standards: In the beginning ther was ES3.
+Before we start, we need to briefly cover the history of JavaScript standards: In the beginning there was ES3.
 
 # JavaScript the Language
 
@@ -34,7 +34,7 @@ Before we start, we need to briefly cover the history of JavaScript standards: I
 
 With that knowledge in mind, lets dig in to the compiler options.
 
-# "target"
+## `target`
 
 Target represents the expected baseline support of ECMAScript that you want to compile against.
 
