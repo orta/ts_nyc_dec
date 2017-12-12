@@ -18,7 +18,7 @@ Before we start, we need to briefly cover the history of JavaScript standards: I
 > 
 > ### ES2015
 > 
-> It took forever for [ES6](#es6) to come out, and every time they created / amended a specification there were multiple implementations of the specification available for transpiling via [babel](#babel). This I can imagine was frustrating for developers wanting to use new features, and specification authors trying to put out documentation for discussion as a work in progress. This happened a lot [with the Promises](#promises) API.
+> It took forever for ES6 to come out, and every time they created / amended a specification there were multiple implementations of the specification available for transpiling via babel. This I can imagine was frustrating for developers wanting to use new features, and specification authors trying to put out documentation for discussion as a work in progress. This happened a lot with the Promises API.
 > 
 > To fix this they opted to discuss specification features on a year basis. So that specifications could be smaller and more focused, instead of major multi-year projects. Quite a SemVer jump from 6 to 2015.
 > 
@@ -26,17 +26,18 @@ Before we start, we need to briefly cover the history of JavaScript standards: I
 > 
 > Turns out that didn't work out too well, so the terminology changed again. The change is mainly to set expectations between the Specification authors and developers transpiling those specifications into their apps.
 > 
-> Now an ECMAScript language improvement specification moves through a series of stages, depending on their maturity. I [believe starting][stages] at 0, and working up to 4. 0 Idea, 1 Proposal, 2 Draft, 3 Accepted and 4 Done.
+> Now an ECMAScript language improvement specification moves through a series of stages, depending on their maturity. I believe starting at 0, and working up to 4. 0 Idea, 1 Proposal, 2 Draft, 3 Accepted and 4 Done.
 > 
 > So a ECMAScript Stage 0 feature is going to be really new, if you're using it via a transpiler then you should expect a lot of potential API changes and code churn. The higher the number, the longer the spec has been discussed, and the more likely for the code you're transpiling to be the vanilla JavaScript code in time.
 > 
-> The committee who discussed these improvements are the [TC39][tc39] committee, the cool bit is that you can see [all the proposals][tc39-github] as individual GitHub repos so it's convenient to browse.
+> The committee who discussed these improvements are the TC39 committee, the cool bit is that you can see all the proposals as individual GitHub repos so it's convenient to browse.
 
 With that knowledge in mind, lets dig in to the compiler options.
 
 ## `target`
 
-Target represents the expected baseline support of ECMAScript that you want to compile against.
+Target represents the expected baseline support of the runtime you're going to be executing JS on. Generally speaking
+this is the version of the JS you exect to support as a baseline.
 
 TypeScript:
 
@@ -54,7 +55,7 @@ var myFunc = function() {
 }
 ```
 
-And y'know what, if we make it ES2017 - it turns into this, Which was a little suprising:
+And y'know what, if we make it ES2017 - it stays like this, Which was a little suprising:
 
 ES2017:
 
@@ -64,7 +65,7 @@ var myFunc = function() {
 }
 ```
 
-^ fix this
+I was expecting it to be the same code. Surprises ey?
 
 ## `module`
 
